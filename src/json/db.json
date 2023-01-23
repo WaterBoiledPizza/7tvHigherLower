@@ -1,0 +1,324 @@
+{
+    "emotes": [
+        {
+            "id": "60ae958e229664e8667aea38",
+            "name": "GIGACHAD",
+            "owner": {
+                "id": "60ae264eaee2aa55389c4164",
+                "username": "beutelino",
+                "display_name": "Beutelino",
+                "style": {
+                    "color": 0,
+                    "paint_id": null,
+                    "__typename": "UserStyle"
+                },
+                "__typename": "UserPartial"
+            },
+            "channels": 107377
+        },
+        {
+            "id": "60ae7316f7c927fad14e6ca2",
+            "name": "catJAM",
+            "owner": {
+                "id": "60ae4e170e354776348eff16",
+                "username": "pascii_",
+                "display_name": "pascii_",
+                "style": {
+                    "color": 0,
+                    "paint_id": null,
+                    "__typename": "UserStyle"
+                },
+                "__typename": "UserPartial"
+            },
+            "channels": 94129
+        },
+        {
+            "id": "60aea4074b1ea4526d3c97a9",
+            "name": "BOOBA",
+            "owner": {
+                "id": "60ae99954b1ea4526d8ac75b",
+                "username": "evilmessy",
+                "display_name": "evilmessy",
+                "style": {
+                    "color": 0,
+                    "paint_id": null,
+                    "__typename": "UserStyle"
+                },
+                "__typename": "UserPartial"
+            },
+            "channels": 81395
+        },
+        {
+            "id": "60a1babb3c3362f9a4b8b33a",
+            "name": "catKISS",
+            "owner": {
+                "id": "60867b015e01df61570ab900",
+                "username": "cupofeggy",
+                "display_name": "CupOfEggy",
+                "style": {
+                    "color": -8328449,
+                    "paint_id": "62ab775b184cb0095e3b5f32",
+                    "__typename": "UserStyle"
+                },
+                "__typename": "UserPartial"
+            },
+            "channels": 81014
+        },
+        {
+            "id": "638767f24cc489ef45239272",
+            "name": "peepoShy",
+            "owner": {
+                "id": "6053853cb4d31e459fdaa2dc",
+                "username": "laden",
+                "display_name": "Laden",
+                "style": {
+                    "color": 849892095,
+                    "paint_id": "6230dd6af1aadbc2df5b54e1",
+                    "__typename": "UserStyle"
+                },
+                "__typename": "UserPartial"
+            },
+            "channels": 7198
+        },
+        {
+            "id": "60abf171870d317bef23d399",
+            "name": "modCheck",
+            "owner": {
+                "id": "6053853cb4d31e459fdaa2dc",
+                "username": "laden",
+                "display_name": "Laden",
+                "style": {
+                    "color": 849892095,
+                    "paint_id": "6230dd6af1aadbc2df5b54e1",
+                    "__typename": "UserStyle"
+                },
+                "__typename": "UserPartial"
+            },
+            "channels": 78068
+        },
+        {
+            "id": "60ae65b29627f9aff4fd8bef",
+            "name": "NOOOO",
+            "owner": {
+                "id": "60ae49350e35477634486602",
+                "username": "justrogan",
+                "display_name": "JustRogan",
+                "style": {
+                    "color": 0,
+                    "paint_id": null,
+                    "__typename": "UserStyle"
+                },
+                "__typename": "UserPartial"
+            },
+            "channels": 75620
+        },
+        {
+            "id": "60ae4ec30e35477634988c18",
+            "name": "COPIUM",
+            "owner": {
+                "id": "60ae49350e35477634486602",
+                "username": "justrogan",
+                "display_name": "JustRogan",
+                "style": {
+                    "color": 0,
+                    "paint_id": null,
+                    "__typename": "UserStyle"
+                },
+                "__typename": "UserPartial"
+            },
+            "channels": 74158
+        },
+        {
+            "id": "60ae4bb30e35477634610fda",
+            "name": "NODDERS",
+            "owner": {
+                "id": "60ae4b445d3fdae583d20e9a",
+                "username": "ethantp",
+                "display_name": "ethantp",
+                "style": {
+                    "color": 0,
+                    "paint_id": null,
+                    "__typename": "UserStyle"
+                },
+                "__typename": "UserPartial"
+            },
+            "channels": 68036
+        },
+        {
+            "id": "60a95f109d598ea72fad13bd",
+            "name": "Madge",
+            "owner": {
+                "id": "609fccd64c18609a1dba6c2c",
+                "username": "askhp",
+                "display_name": "askhp",
+                "style": {
+                    "color": 0,
+                    "paint_id": null,
+                    "__typename": "UserStyle"
+                },
+                "__typename": "UserPartial"
+            },
+            "channels": 68180
+        },
+        {
+            "id": "60ae8d9ff39a7552b658b60d",
+            "name": "Bedge",
+            "owner": {
+                "id": "605394d9b4d31e459ff05f40",
+                "username": "paruna",
+                "display_name": "Paruna",
+                "style": {
+                    "color": -5635841,
+                    "paint_id": "6387708e11dfd13a4213f283",
+                    "__typename": "UserStyle"
+                },
+                "__typename": "UserPartial"
+            },
+            "channels": 68111
+        },
+        {
+            "id": "603cac391cd55c0014d989be",
+            "name": "Sadge",
+            "owner": {
+                "id": "603ca8f696832ffa78c01eb4",
+                "username": "mauriplss",
+                "display_name": "Mauriplss",
+                "style": {
+                    "color": 0,
+                    "paint_id": null,
+                    "__typename": "UserStyle"
+                },
+                "__typename": "UserPartial"
+            },
+            "channels": 67980
+        },
+        {
+            "id": "60aec2196cfcffe15f4e4f93",
+            "name": "Prayge",
+            "owner": {
+                "id": "60ac7c354ef7db1ec1e9b730",
+                "username": "neowav",
+                "display_name": "Neowav",
+                "style": {
+                    "color": 0,
+                    "paint_id": null,
+                    "__typename": "UserStyle"
+                },
+                "__typename": "UserPartial"
+            },
+            "channels": 66183
+        },
+        {
+            "id": "60ccf4479f5edeff9938fa77",
+            "name": "SUSSY",
+            "owner": {
+                "id": "6144a9f80969108b67193814",
+                "username": "epicdonutdude_",
+                "display_name": "EpicDonutDude_",
+                "style": {
+                    "color": 0,
+                    "paint_id": null,
+                    "__typename": "UserStyle"
+                },
+                "__typename": "UserPartial"
+            },
+            "channels": 62159
+        },
+        {
+            "id": "60aee9d5361b0164e60d02c2",
+            "name": "WICKED",
+            "owner": {
+                "id": "60ae7682f7c927fad17bc447",
+                "username": "pandabene_",
+                "display_name": "Pandabene_",
+                "style": {
+                    "color": 0,
+                    "paint_id": null,
+                    "__typename": "UserStyle"
+                },
+                "__typename": "UserPartial"
+            },
+            "channels": 59468
+        },
+        {
+            "id": "60a9cfe96daf811370b0b640",
+            "name": "donowall",
+            "owner": {
+                "id": "609ea82f326f0aaa85997c8f",
+                "username": "ttootts",
+                "display_name": "Ttootts",
+                "style": {
+                    "color": 0,
+                    "paint_id": null,
+                    "__typename": "UserStyle"
+                },
+                "__typename": "UserPartial"
+            },
+            "channels": 58083
+        },
+        {
+            "id": "60aeec1712d7701491f89cf5",
+            "name": "peepoHey",
+            "owner": {
+                "id": "60ae49350e35477634486602",
+                "username": "justrogan",
+                "display_name": "JustRogan",
+                "style": {
+                    "color": 0,
+                    "paint_id": null,
+                    "__typename": "UserStyle"
+                },
+                "__typename": "UserPartial"
+            },
+            "channels": 58270
+        },
+        {
+            "id": "629f7ed33cfb54ec859bb216",
+            "name": "peepoLeave",
+            "owner": {
+                "id": "60ae823b7eace53a2240e0c3",
+                "username": "boopiskat",
+                "display_name": "BoopisKat",
+                "style": {
+                    "color": 0,
+                    "paint_id": null,
+                    "__typename": "UserStyle"
+                },
+                "__typename": "UserPartial"
+            },
+            "channels": 57162
+        },
+        {
+            "id": "60afc2eaa3648f409a82e80b",
+            "name": "peepoArrive",
+            "owner": {
+                "id": "60ced8f75e8535b651cfc821",
+                "username": "sundizzle",
+                "display_name": "sundizzle",
+                "style": {
+                    "color": -5635841,
+                    "paint_id": null,
+                    "__typename": "UserStyle"
+                },
+                "__typename": "UserPartial"
+            },
+            "channels": 54952
+        },
+        {
+            "id": "60afbe0599923bbe7fe9bae1",
+            "name": "POGGIES",
+            "owner": {
+                "id": "60a2b6f17d57f5ca75e180a4",
+                "username": "typeopessimist",
+                "display_name": "typeopessimist",
+                "style": {
+                    "color": 0,
+                    "paint_id": null,
+                    "__typename": "UserStyle"
+                },
+                "__typename": "UserPartial"
+            },
+            "channels": 52946
+        }
+    ]
+}
