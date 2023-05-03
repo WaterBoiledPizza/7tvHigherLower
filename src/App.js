@@ -2,11 +2,11 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import Card from "./Components/Card";
 import Home from "./Home";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 
 function App() {
     return (
-        <Router>
+        <HashRouter>
             <main className="App">
                 {/* <Card /> */}
                 <Routes>
@@ -14,7 +14,7 @@ function App() {
                     <Route path="/channel/:id" element={<Card />} />
                 </Routes>
             </main>
-        </Router>
+        </HashRouter>
     );
 }
 
