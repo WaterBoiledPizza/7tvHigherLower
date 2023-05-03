@@ -17,8 +17,10 @@
 
 .channel-form {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: white;
     text-align: center;
 }
 
@@ -28,6 +30,11 @@
     padding-bottom: 1rem;
     color: white;
     align-items: center;
+}
+
+.channel-form h1 {
+    font-size: 72px;
+    margin-bottom: 36px;
 }
 
 .channel-form label,

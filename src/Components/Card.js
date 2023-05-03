@@ -143,8 +143,9 @@ function Card(props) {
                         <h2>You Lost</h2>
                         <h3>You Score: {score}</h3>
                         <Link to={`/`}>Home</Link>
-                        <Link reloadDocument to={`/channel/${id}`}>
-                            Try again
+                        <Link reloadDocument to={`/channel/${id}`} onClick={() => window.location.reload()}>
+                            <div>Try again</div>
+                            <div style={{ fontSize: 12 }}>Reload page if link doesn't work</div>
                         </Link>
                     </div>
                 </div>

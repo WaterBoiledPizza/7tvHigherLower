@@ -27,11 +27,13 @@ const Home = () => {
 
     return (
         <div className="channel-form">
+            <h1>Channel Emote Usage Game</h1>
             <form onSubmit={handleSubmit}>
                 <label>Enter channel name:</label>
                 <input type="text" id="channel" onChange={(e) => setChannel(e.target.value)} value={channel} required />
                 <button>PLAAAAY</button>
             </form>
+            <div>Statistics provided by: Kattah</div>
         </div>
     );
 };
