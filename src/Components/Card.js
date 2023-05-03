@@ -5,6 +5,7 @@ import correctSVG from "../SVGs/correct.svg";
 import wrongSVG from "../SVGs/wrong.svg";
 import "../App.css";
 import { useParams, Link } from "react-router-dom";
+import Chat from "./Chat";
 
 // let emoteArray = database.emotes;
 // console.log(emoteArray);
@@ -182,11 +183,16 @@ function Card(props) {
         }
 
         return (
-            <AnimatePresence className="App">
-                <DisplayCards />
-                <AnimateAnswer />
-                {lost === "true" ? <YouLost /> : null}
-            </AnimatePresence>
+            <div className="layout">
+                <div className="Game">
+                    <AnimatePresence>
+                        <DisplayCards />
+                        <AnimateAnswer />
+                        {lost === "true" ? <YouLost /> : null}
+                    </AnimatePresence>
+                </div>
+                <Chat id={id} />
+            </div>
         );
     }
 }
