@@ -87,7 +87,11 @@ function Card(props) {
             }, 1000);
         }
         function AnimatedCounter() {
-            return <CountUp className="counter" style={showCounter ? { opacity: 1 } : { opacity: 0 }} end={showCounter ? emotes[1].count : 0} duration={0.3} />;
+            return (
+                <CountUp className="counter" style={showCounter ? { opacity: 1 } : { opacity: 0 }} end={showCounter ? emotes[1].count : 0} duration={0.3}>
+                    times
+                </CountUp>
+            );
         }
 
         const displayEmotes = emotes.map((emote, index) => {
@@ -110,9 +114,8 @@ function Card(props) {
                         {animate ? <div className="section3"></div> : null}
                         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="about-emote">
                             <img src={"https://cdn.7tv.app/emote/" + emote.emote_id + "/4x.webp"} alt="" className="emote-bg" />
-                            <h2 className="emote-title">
-                                <b>{emote.emote}</b> is used
-                            </h2>
+                            <h2 className="emote-title">{emote.emote}</h2>
+                            <div>is used</div>
                             <div className="btn-wrapper">
                                 <button
                                     className="btn"
