@@ -97,7 +97,9 @@ function Card(props) {
                         <div className="about-emote">
                             <img src={"https://cdn.7tv.app/emote/" + emote.emote_id + "/4x.webp"} alt="" className="emote-bg" />
                             <h2 className="emote-title">{emote.emote}</h2>
-                            <h3>is used {emote.count} times in chat</h3>
+                            <div>is used</div>
+                            <h3>{emote.count} </h3>
+                            <div>times in chat</div>
                         </div>
                     </motion.div>
                 );
