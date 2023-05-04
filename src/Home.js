@@ -27,7 +27,9 @@ const Home = () => {
 
     return (
         <div className="channel-form">
-            <h1>Channel Emote Usage Game</h1>
+            <h1>Emote Usage Guessing Game</h1>
+            <h3>The Top 100 used emote of the channel of your choice is picked. Guess which ones are used more (and which ones to remove Evilge)</h3>
+            <p>Please do note that not all channel are available, and some emotes might be displayed the wrong version.</p>
             <form onSubmit={handleSubmit}>
                 <label>Enter channel name:</label>
                 <input type="text" id="channel" onChange={(e) => setChannel(e.target.value)} value={channel} required />
