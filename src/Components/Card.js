@@ -118,8 +118,9 @@ function Card(props) {
                             <div>is used</div>
                             <div className="btn-wrapper">
                                 <button
+                                    disabled={showCounter ? true : false}
                                     className="btn"
-                                    onClick={() => {
+                                    onClick={(e) => {
                                         setShowCounter(true);
                                         emotes[0].count < emote.count ? guessedCorrect() : emotes[0].count === emote.count ? guessedCorrect() : guessedWrong();
                                     }}
@@ -128,7 +129,8 @@ function Card(props) {
                                 </button>
                                 <button
                                     className="btn"
-                                    onClick={() => {
+                                    disabled={showCounter ? true : false}
+                                    onClick={(e) => {
                                         setShowCounter(true);
                                         emotes[0].count > emote.count ? guessedCorrect() : emotes[0].count === emote.count ? guessedCorrect() : guessedWrong();
                                     }}
@@ -146,7 +148,7 @@ function Card(props) {
             return (
                 <div className="lost-overlay">
                     <div className="lost-box">
-                        <h2>You Lost</h2>
+                        <h2>SO BAD OMEGALUL</h2>
                         <h3>You Score: {score}</h3>
                         <Link to={`/`}>Home</Link>
                         <Link reloadDocument to={`/channel/${id}`} onClick={() => window.location.reload()}>

@@ -54,6 +54,10 @@
     font-size: 72px;
 }
 
+.channel-form p {
+    margin: 5px;
+}
+
 .channel-form label,
 input {
     margin: 5px;
