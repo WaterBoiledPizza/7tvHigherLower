@@ -112,7 +112,7 @@ function Card(props) {
                 return (
                     <motion.div className={animate ? "section2-animate" : "section2"}>
                         {animate ? <div className="section3"></div> : null}
-                        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="about-emote">
+                        <motion.div className="about-emote">
                             <img src={"https://cdn.7tv.app/emote/" + emote.emote_id + "/4x.webp"} alt="" className="emote-bg" />
                             <h2 className="emote-title">{emote.emote}</h2>
                             <div>is used</div>
@@ -148,7 +148,7 @@ function Card(props) {
             return (
                 <div className="lost-overlay">
                     <div className="lost-box">
-                        <h2>SO BAD OMEGALUL</h2>
+                        <h2>SOMEGALUL BAD </h2>
                         <h3>You Score: {score}</h3>
                         <Link to={`/`}>Home</Link>
                         <Link reloadDocument to={`/channel/${id}`} onClick={() => window.location.reload()}>
