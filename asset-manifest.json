@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/7tvHigherLower/static/css/main.1e914db5.css",
-    "main.js": "/7tvHigherLower/static/js/main.c3df6ee2.js",
+    "main.css": "/7tvHigherLower/static/css/main.b665a162.css",
+    "main.js": "/7tvHigherLower/static/js/main.66bd18fb.js",
     "index.html": "/7tvHigherLower/index.html",
     "static/media/wrong.svg": "/7tvHigherLower/static/media/wrong.bcafc44e699309be332cda17c02d7f47.svg",
     "static/media/correct.svg": "/7tvHigherLower/static/media/correct.49af50771fdf76478e666bb5d8098a58.svg",
-    "main.1e914db5.css.map": "/7tvHigherLower/static/css/main.1e914db5.css.map",
-    "main.c3df6ee2.js.map": "/7tvHigherLower/static/js/main.c3df6ee2.js.map"
+    "main.b665a162.css.map": "/7tvHigherLower/static/css/main.b665a162.css.map",
+    "main.66bd18fb.js.map": "/7tvHigherLower/static/js/main.66bd18fb.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e914db5.css",
-    "static/js/main.c3df6ee2.js"
+    "static/css/main.b665a162.css",
+    "static/js/main.66bd18fb.js"
   ]
 }
