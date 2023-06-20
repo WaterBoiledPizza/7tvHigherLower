@@ -41,33 +41,37 @@
     text-align: center;
 }
 
-.channel-form form {
-    margin: 36px;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 1rem;
-    color: white;
-    align-items: center;
-}
-
 .channel-form h1 {
     font-size: 72px;
 }
 
-.channel-form p {
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.buttons img {
     margin: 5px;
 }
 
-.channel-form label,
-input {
-    margin: 5px;
-    font-size: 36px;
+.buttons h3,
+h5 {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-.channel-form button {
+.buttons button {
+    width: 25%;
+    height: 100%;
+    padding: 5px;
     margin: 5px;
     font-size: 24px;
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .not-found {
@@ -105,6 +109,7 @@ input {
     justify-content: center;
     align-items: center;
     font-size: 36px;
+    white-space: nowrap;
 }
 .section1 {
     display: flex;
@@ -416,4 +421,12 @@ h3 {
     .VS {
         font-size: 16px;
     }
+}
+
+.loading {
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

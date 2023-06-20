@@ -5,18 +5,16 @@ import correctSVG from "../SVGs/correct.svg";
 import wrongSVG from "../SVGs/wrong.svg";
 import "../App.css";
 import { useParams, Link } from "react-router-dom";
-import Chat from "./Chat";
 
 // let emoteArray = database.emotes;
 // console.log(emoteArray);
 
-function Card(props) {
+function Card2(props) {
     const [emoteArray, setEmoteArray] = useState([
         {
             emote: "",
             emote_id: "",
-            count: 0,
-            added: "",
+            total_count: 0,
         },
     ]);
     const [emotes, setEmotes] = useState([]);
@@ -27,19 +25,17 @@ function Card(props) {
     const [showCounter, setShowCounter] = useState(false);
     const [score, setScore] = useState(0);
     const { id } = useParams();
-    // Option to Play with Ratings or Votes
-    // const withRatings = false;
 
     useEffect(() => {
         if (isMounted.current === false) {
-            const fetchEmotes = async () => {
-                const response = await fetch(`https://api.kattah.me/c/${id}`);
+            const fetchEmotes = async (id) => {
+                const response = await fetch(`https://api.kattah.me/${id}`);
+                console.log(response);
                 const json = await response.json();
                 // console.log(emoteArray);
                 setEmoteArray(json.emotes);
             };
-
-            fetchEmotes();
+            fetchEmotes(id);
         }
     }, []);
 
@@ -88,7 +84,7 @@ function Card(props) {
         }
         function AnimatedCounter() {
             return (
-                <CountUp className="counter" style={showCounter ? { opacity: 1 } : { opacity: 0 }} end={showCounter ? emotes[1].count : 0} duration={0.3}>
+                <CountUp className="counter" style={showCounter ? { opacity: 1 } : { opacity: 0 }} end={showCounter ? emotes[1].total_count : 0} duration={0.3}>
                     times
                 </CountUp>
             );
@@ -103,7 +99,7 @@ function Card(props) {
                             <img src={"https://cdn.7tv.app/emote/" + emote.emote_id + "/4x.webp"} alt="" className="emote-bg" />
                             <h2 className="emote-title">{emote.emote}</h2>
                             <div>is used</div>
-                            <h3>{emote.count} </h3>
+                            <h3>{emote.total_count} </h3>
                             <div>times in chat</div>
                         </div>
                     </motion.div>
@@ -122,7 +118,11 @@ function Card(props) {
                                     className="btn"
                                     onClick={(e) => {
                                         setShowCounter(true);
-                                        emotes[0].count < emote.count ? guessedCorrect() : emotes[0].count === emote.count ? guessedCorrect() : guessedWrong();
+                                        emotes[0].total_count < emote.total_count
+                                            ? guessedCorrect()
+                                            : emotes[0].total_count === emote.total_count
+                                            ? guessedCorrect()
+                                            : guessedWrong();
                                     }}
                                 >
                                     More <div className="arrow-up"></div>
@@ -132,7 +132,11 @@ function Card(props) {
                                     disabled={showCounter ? true : false}
                                     onClick={(e) => {
                                         setShowCounter(true);
-                                        emotes[0].count > emote.count ? guessedCorrect() : emotes[0].count === emote.count ? guessedCorrect() : guessedWrong();
+                                        emotes[0].total_count > emote.total_count
+                                            ? guessedCorrect()
+                                            : emotes[0].total_count === emote.total_count
+                                            ? guessedCorrect()
+                                            : guessedWrong();
                                     }}
                                 >
                                     Less <div className="arrow-down"></div>
@@ -151,9 +155,9 @@ function Card(props) {
                         <h2>SOMEGALUL BAD </h2>
                         <h3>You Score: {score}</h3>
                         <Link to={`/`}>Home</Link>
-                        <Link reloadDocument to={`/channel/${id}`} onClick={() => window.location.reload()}>
+                        <Link reloadDocument to={`/game2/${id}`} onClick={() => window.location.reload()}>
                             <div>Try again</div>
-                            <div style={{ fontSize: 12 }}>Reload page if link doesn't work</div>
+                            {/* <div style={{ fontSize: 12 }}>Reload page if link doesn't work</div> */}
                         </Link>
                     </div>
                 </div>
@@ -196,10 +200,10 @@ function Card(props) {
                         {lost === "true" ? <YouLost /> : null}
                     </AnimatePresence>
                 </div>
-                <Chat id={id} />
+                {/* <Chat id={id} /> */}
             </div>
         );
     }
 }
 
-export default Card;
+export default Card2;
