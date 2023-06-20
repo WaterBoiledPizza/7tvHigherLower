@@ -73,8 +73,13 @@ function Card1(props) {
     console.log(emotesQuery.loading, emotesQuery.error, emotesQuery.data);
 
     useEffect(() => {
-        if (emotesQuery.loading === false) {
-            setEmoteArray(emotesQuery.data.emotes.items);
+        if (localStorage.getItem(id) === null) {
+            if (emotesQuery.loading === false) {
+                setEmoteArray(emotesQuery.data.emotes.items);
+                localStorage.setItem(id, JSON.stringify(emotesQuery.data.emotes.items));
+            }
+        } else {
+            setEmoteArray(JSON.parse(localStorage.getItem(id)));
         }
     }, [emotesQuery.loading]);
 

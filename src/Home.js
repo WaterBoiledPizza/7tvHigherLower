@@ -42,7 +42,7 @@ const Home = () => {
             </div>
             <h5>‎</h5>
             <p>The count is finalized when the Play button is pressed, so don't worry about tomfooleries in chat when playing.</p>
-            <p>Statistics provided by: Kattah</p>
+            <p>Statistics provided by: 7TV, Kattah</p>
         </div>
     );
 };
