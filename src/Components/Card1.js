@@ -140,10 +140,15 @@ function Card1(props) {
                     style={showCounter ? { opacity: 1 } : { opacity: 0 }}
                     end={showCounter ? emotes[1].channels.total : 0}
                     duration={0.3}
+                    separator=","
                 >
                     times
                 </CountUp>
             );
+        }
+
+        function thousandSeperator(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         }
 
         const displayEmotes = emotes.map((emote, index) => {
@@ -155,7 +160,7 @@ function Card1(props) {
                             <img src={"https://cdn.7tv.app/emote/" + emote.id + "/4x.webp"} alt="" className="emote-bg" />
                             <h2 className="emote-title">{emote.name}</h2>
                             <div>is enabled in</div>
-                            <h3>{emote.channels.total} </h3>
+                            <h3>{thousandSeperator(emote.channels.total)} </h3>
                             <div>channels</div>
                             <span className="counter">‎</span>
                         </div>

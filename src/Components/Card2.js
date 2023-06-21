@@ -91,10 +91,20 @@ function Card2(props) {
         }
         function AnimatedCounter() {
             return (
-                <CountUp className="counter" style={showCounter ? { opacity: 1 } : { opacity: 0 }} end={showCounter ? emotes[1].total_count : 0} duration={0.3}>
+                <CountUp
+                    className="counter"
+                    style={showCounter ? { opacity: 1 } : { opacity: 0 }}
+                    end={showCounter ? emotes[1].total_count : 0}
+                    duration={0.3}
+                    separator=","
+                >
                     times
                 </CountUp>
             );
+        }
+
+        function thousandSeperator(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         }
 
         const displayEmotes = emotes.map((emote, index) => {
@@ -106,7 +116,7 @@ function Card2(props) {
                             <img src={"https://cdn.7tv.app/emote/" + emote.emote_id + "/4x.webp"} alt="" className="emote-bg" />
                             <h2 className="emote-title">{emote.emote}</h2>
                             <div>is used</div>
-                            <h3>{emote.total_count} </h3>
+                            <h3>{thousandSeperator(emote.total_count)} </h3>
                             <div>times in chat</div>
                             <span className="counter">‎</span>
                         </div>
