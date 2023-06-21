@@ -4,13 +4,15 @@ import CountUp from "react-countup";
 import correctSVG from "../SVGs/correct.svg";
 import wrongSVG from "../SVGs/wrong.svg";
 import "../App.css";
-import { useParams, Link } from "react-router-dom";
-import { useLazyQuery, useQuery, gql } from "@apollo/client";
+import { useNavigate, useParams, Link } from "react-router-dom";
+import { useQuery, gql } from "@apollo/client";
 
 // let emoteArray = database.emotes;
 // console.log(emoteArray);
 
 function Card1(props) {
+    const navigate = useNavigate();
+
     const [emoteArray, setEmoteArray] = useState([
         {
             channels: {
@@ -110,7 +112,10 @@ function Card1(props) {
                 setTimeout(() => {
                     setShowCounter(false);
                     setEmotes((emote) => {
-                        const rnum3 = emoteArray[Math.floor(Math.random() * emoteArray.length)];
+                        var rnum3 = emoteArray[Math.floor(Math.random() * emoteArray.length)];
+                        while (rnum3.id === emotes[0].id || rnum3.id === emotes[1].id) {
+                            rnum3 = emoteArray[Math.floor(Math.random() * emoteArray.length)];
+                        }
                         const oldEmotes = [...emote].splice(1, 1);
                         const newemote = [...oldEmotes, rnum3];
                         return newemote;
@@ -149,6 +154,7 @@ function Card1(props) {
                             <div>is enabled in</div>
                             <h3>{emote.channels.total} </h3>
                             <div>channels</div>
+                            <span className="counter">‎</span>
                         </div>
                     </motion.div>
                 );
@@ -241,6 +247,13 @@ function Card1(props) {
 
         return (
             <div className="layout">
+                <button
+                    onClick={() => {
+                        navigate(`/`);
+                    }}
+                >
+                    <h3>Back</h3>
+                </button>
                 <div className="Game">
                     <AnimatePresence>
                         <DisplayCards />
@@ -254,7 +267,7 @@ function Card1(props) {
     } else {
         return (
             <div className="loading">
-                <img src="https://cdn.7tv.app/emote/6256e1e6c2be2d716f88e09a/4x.webp"></img>
+                <img src="https://cdn.7tv.app/emote/6256e1e6c2be2d716f88e09a/4x.webp" alt="LADINK..."></img>
                 GENERATING GOD SEED...
             </div>
         );

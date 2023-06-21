@@ -4,12 +4,14 @@ import CountUp from "react-countup";
 import correctSVG from "../SVGs/correct.svg";
 import wrongSVG from "../SVGs/wrong.svg";
 import "../App.css";
-import { useParams, Link } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
 
 // let emoteArray = database.emotes;
 // console.log(emoteArray);
 
 function Card2(props) {
+    const navigate = useNavigate();
+
     const [emoteArray, setEmoteArray] = useState([
         {
             emote: "",
@@ -67,7 +69,10 @@ function Card2(props) {
                 setTimeout(() => {
                     setShowCounter(false);
                     setEmotes((emote) => {
-                        const rnum3 = emoteArray[Math.floor(Math.random() * emoteArray.length)];
+                        var rnum3 = emoteArray[Math.floor(Math.random() * emoteArray.length)];
+                        while (rnum3.emote_id === emotes[0].emote_id || rnum3.emote_id === emotes[1].emote_id) {
+                            rnum3 = emoteArray[Math.floor(Math.random() * emoteArray.length)];
+                        }
                         const oldEmotes = [...emote].splice(1, 1);
                         const newemote = [...oldEmotes, rnum3];
                         return newemote;
@@ -101,6 +106,7 @@ function Card2(props) {
                             <div>is used</div>
                             <h3>{emote.total_count} </h3>
                             <div>times in chat</div>
+                            <span className="counter">‎</span>
                         </div>
                     </motion.div>
                 );
@@ -193,6 +199,13 @@ function Card2(props) {
 
         return (
             <div className="layout">
+                <button
+                    onClick={() => {
+                        navigate(`/`);
+                    }}
+                >
+                    <h3>Back</h3>
+                </button>
                 <div className="Game">
                     <AnimatePresence>
                         <DisplayCards />
@@ -201,6 +214,13 @@ function Card2(props) {
                     </AnimatePresence>
                 </div>
                 {/* <Chat id={id} /> */}
+            </div>
+        );
+    } else {
+        return (
+            <div className="loading">
+                <img src="https://cdn.7tv.app/emote/6256e1e6c2be2d716f88e09a/4x.webp" alt="LADINK..."></img>
+                GENERATING GOD SEED...
             </div>
         );
     }
