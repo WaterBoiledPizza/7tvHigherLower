@@ -46,6 +46,7 @@
     align-items: center;
     color: white;
     text-align: center;
+    width: 100vh;
 }
 
 .channel-form h1 {
