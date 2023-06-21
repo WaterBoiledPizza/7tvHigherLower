@@ -72,7 +72,7 @@ function Card1(props) {
         variables: EMOTES_QUERY_VARIABLE(id),
     });
 
-    console.log(emotesQuery.loading, emotesQuery.error, emotesQuery.data);
+    // console.log(emotesQuery.loading, emotesQuery.error, emotesQuery.data);
 
     useEffect(() => {
         if (localStorage.getItem(id) === null) {
@@ -86,10 +86,13 @@ function Card1(props) {
     }, [emotesQuery.loading]);
 
     useEffect(() => {
-        console.log(emoteArray);
+        // console.log(emoteArray);
         // Picking Random Emotes from an Array
         const rnum1 = emoteArray[Math.floor(Math.random() * emoteArray.length)];
-        const rnum2 = emoteArray[Math.floor(Math.random() * emoteArray.length)];
+        var rnum2 = emoteArray[Math.floor(Math.random() * emoteArray.length)];
+        while (rnum2.id === rnum1.id && rnum1.id) {
+            rnum2 = emoteArray[Math.floor(Math.random() * emoteArray.length)];
+        }
 
         // Inserting them in a new Array
         setEmotes([rnum1, rnum2]);
@@ -113,7 +116,7 @@ function Card1(props) {
                     setShowCounter(false);
                     setEmotes((emote) => {
                         var rnum3 = emoteArray[Math.floor(Math.random() * emoteArray.length)];
-                        while (rnum3.id === emotes[0].id || rnum3.id === emotes[1].id) {
+                        while (rnum3.id === emotes[0].id && rnum3.id === emotes[1].id) {
                             rnum3 = emoteArray[Math.floor(Math.random() * emoteArray.length)];
                         }
                         const oldEmotes = [...emote].splice(1, 1);
@@ -208,11 +211,11 @@ function Card1(props) {
                     <div className="lost-box">
                         <h2>SOMEGALUL BAD </h2>
                         <h3>You Score: {score}</h3>
-                        <Link to={`/`}>Home</Link>
                         <Link reloadDocument to={`/game/${id}`} onClick={() => window.location.reload()}>
                             <div>Try again</div>
                             {/* <div style={{ fontSize: 12 }}>Reload page if link doesn't work</div> */}
                         </Link>
+                        <Link to={`/`}>Home</Link>
                     </div>
                 </div>
             );

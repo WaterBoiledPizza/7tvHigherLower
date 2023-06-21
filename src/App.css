@@ -222,7 +222,8 @@ h5 {
 .btn {
     width: 150px;
     height: 50px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     background: none;
     color: #e0e0e0;
     border: 3px white solid;
@@ -390,6 +391,8 @@ h3 {
     .btn {
         width: 140px;
         height: 40px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
     .arrow-up {
         width: 0;

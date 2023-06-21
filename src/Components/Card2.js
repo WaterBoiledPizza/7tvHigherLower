@@ -32,7 +32,7 @@ function Card2(props) {
         if (isMounted.current === false) {
             const fetchEmotes = async (id) => {
                 const response = await fetch(`https://api.kattah.me/${id}`);
-                console.log(response);
+                // console.log(response);
                 const json = await response.json();
                 // console.log(emoteArray);
                 setEmoteArray(json.emotes);
@@ -42,11 +42,13 @@ function Card2(props) {
     }, []);
 
     useEffect(() => {
-        console.log(emoteArray);
+        // console.log(emoteArray);
         // Picking Random Emotes from an Array
         const rnum1 = emoteArray[Math.floor(Math.random() * emoteArray.length)];
-        const rnum2 = emoteArray[Math.floor(Math.random() * emoteArray.length)];
-        // console.log(rnum1, rnum2, rnum3);
+        var rnum2 = emoteArray[Math.floor(Math.random() * emoteArray.length)];
+        if (rnum2.emote_id === rnum1.emote_id && rnum1.emote_id) {
+            rnum2 = emoteArray[Math.floor(Math.random() * emoteArray.length)];
+        }
 
         // Inserting them in a new Array
         setEmotes([rnum1, rnum2]);
@@ -70,7 +72,7 @@ function Card2(props) {
                     setShowCounter(false);
                     setEmotes((emote) => {
                         var rnum3 = emoteArray[Math.floor(Math.random() * emoteArray.length)];
-                        while (rnum3.emote_id === emotes[0].emote_id || rnum3.emote_id === emotes[1].emote_id) {
+                        while (rnum3.emote_id === emotes[0].emote_id && rnum3.emote_id === emotes[1].emote_id) {
                             rnum3 = emoteArray[Math.floor(Math.random() * emoteArray.length)];
                         }
                         const oldEmotes = [...emote].splice(1, 1);
@@ -160,11 +162,12 @@ function Card2(props) {
                     <div className="lost-box">
                         <h2>SOMEGALUL BAD </h2>
                         <h3>You Score: {score}</h3>
-                        <Link to={`/`}>Home</Link>
+
                         <Link reloadDocument to={`/game2/${id}`} onClick={() => window.location.reload()}>
                             <div>Try again</div>
                             {/* <div style={{ fontSize: 12 }}>Reload page if link doesn't work</div> */}
                         </Link>
+                        <Link to={`/`}>Home</Link>
                     </div>
                 </div>
             );
